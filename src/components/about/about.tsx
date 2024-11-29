@@ -65,7 +65,7 @@ function About() {
 
               {/* Ícone App Store */}
               <a
-                href="#"
+                href="https://apps.apple.com/br/app/etrium-software-jur%C3%ADdico/id6670408099"
                 target="_blank"
                 className="text-black hover:text-[#0072C7]"
               >
