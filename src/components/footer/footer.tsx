@@ -2,7 +2,7 @@ import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Footer() {
-  const whatsappNumber = "5583986151110"; // Substitua pelo número do WhatsApp
+  const whatsappNumber = "5583987005885"; // Substitua pelo número do WhatsApp
   const whatsappMessage = encodeURIComponent(
     "Olá, vim através do site e gostaria de saber mais informações sobre os serviços da Etrium."
   );
