@@ -5,7 +5,6 @@ import { faGooglePlay, faAppStoreIos } from '@fortawesome/free-brands-svg-icons'
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
