@@ -5,10 +5,8 @@ import { faGooglePlay, faAppStoreIos } from '@fortawesome/free-brands-svg-icons'
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ButtonShad } from '../ui/buttonShad';
@@ -43,6 +41,7 @@ function About() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="mt-8 flex flex-col md:flex-row gap-4 items-center"
         >
+          {/* Dropdown Menu */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <ButtonShad
@@ -52,37 +51,35 @@ function About() {
                 Download App
               </ButtonShad>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56">
-              <DropdownMenuLabel>Escolha o seu sistema</DropdownMenuLabel>
-              <DropdownMenuSeparator />
+            <DropdownMenuContent className="w-56 flex items-center justify-center gap-8 py-2">
+              {/* Ícone Google Play */}
               <a
                 href="https://play.google.com/store/apps/details?id=br.com.etrium&hl=pt"
                 target="_blank"
-                className="no-underline"
+                className="text-black hover:text-[#0072C7]"
               >
-                <DropdownMenuItem className="hover:bg-[#0072C7] hover:text-white cursor-pointer">
-                  Android
-                  <DropdownMenuShortcut>
-                    <FontAwesomeIcon icon={faGooglePlay} className="text-black hover:text-white" />
-                  </DropdownMenuShortcut>
-                </DropdownMenuItem>
+                <FontAwesomeIcon icon={faGooglePlay} className="text-[23px]" />
               </a>
-              <a href="" target="_blank" className="no-underline">
-                <DropdownMenuItem className="hover:bg-[#0072C7] hover:text-white cursor-pointer">
-                  iOS
-                  <DropdownMenuShortcut>
-                    <FontAwesomeIcon icon={faAppStoreIos} className="text-black hover:text-white" />
-                  </DropdownMenuShortcut>
-                </DropdownMenuItem>
+
+              {/* Divisor */}
+              <DropdownMenuSeparator className="h-8 w-px bg-gray-300" />
+
+              {/* Ícone App Store */}
+              <a
+                href="#"
+                target="_blank"
+                className="text-black hover:text-[#0072C7]"
+              >
+                <FontAwesomeIcon icon={faAppStoreIos} className="text-[23px]" />
               </a>
             </DropdownMenuContent>
           </DropdownMenu>
 
+          {/* Ícones fora do Dropdown */}
           <div className="flex items-center gap-4">
-            <a href="">
+            <a href="#">
               <FontAwesomeIcon icon={faAppStoreIos} className="text-white hover:text-[#2D91FF] text-[32px]" />
             </a>
-
             <a href="https://play.google.com/store/apps/details?id=br.com.etrium&hl=pt" target="_blank">
               <FontAwesomeIcon icon={faGooglePlay} className="text-white hover:text-[#2D91FF] text-[32px]" />
             </a>
