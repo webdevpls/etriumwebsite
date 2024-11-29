@@ -40,7 +40,6 @@ function Home() {
         >
           <motion.div
             drag="x"
-            dragConstraints={{ right: 0, left: -carouselRef.current?.scrollWidth + carouselRef.current?.offsetWidth }}
             className="flex space-x-4"
           >
             {images.map((src, index) => (
