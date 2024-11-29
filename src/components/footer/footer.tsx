@@ -1,4 +1,4 @@
-import { FaLinkedin, FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -42,9 +42,7 @@ function Footer() {
             <a href="https://www.facebook.com/etriumjuridico" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <FaFacebook size={24} />
             </a>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
-              <FaWhatsapp size={24} />
-            </a>
+
           </div>
 
           {/* WhatsApp Contact Button */}
