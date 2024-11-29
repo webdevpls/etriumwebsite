@@ -2,19 +2,11 @@ import { FaLinkedin, FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa"
 import { Link } from "react-router-dom";
 
 function Footer() {
- // Função para gerar o link do WhatsApp com a mensagem do usuário
- const handleWhatsAppMessage = () => {
-  const messageInput = document.getElementById("whatsappMessage") as HTMLInputElement | null;
-
-  if (messageInput) {
-    const message = encodeURIComponent(messageInput.value);
-    const phoneNumber = "5583986151110"; // Substitua pelo número de telefone do WhatsApp
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappLink, "_blank");
-  } else {
-    console.error("O elemento de entrada para a mensagem não foi encontrado.");
-  }
-};
+  const whatsappNumber = "5583986151110"; // Substitua pelo número do WhatsApp
+  const whatsappMessage = encodeURIComponent(
+    "Olá, vim através do site e gostaria de saber mais informações sobre os serviços da Etrium."
+  );
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
     <section className="bg-[#15151D] py-12">
@@ -50,27 +42,23 @@ function Footer() {
             <a href="https://www.facebook.com/etriumjuridico" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <FaFacebook size={24} />
             </a>
-            <a href="https://wa.me/5583986151110" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               <FaWhatsapp size={24} />
             </a>
           </div>
 
-          {/* WhatsApp Support */}
+          {/* WhatsApp Contact Button */}
           <div className="mt-4">
-            <h3 className="font-bold text-lg">Suporte no WhatsApp</h3>
-            <div className="flex items-center space-x-2 mt-2">
-              <input
-                type="text"
-                id="whatsappMessage"
-                placeholder="Digite sua mensagem"
-                className="w-full p-2 rounded bg-gray-700 text-white placeholder-gray-400 select-none"
-              />
-              <button
-                onClick={handleWhatsAppMessage}
-                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
+            <h3 className="font-bold text-lg">Entre em contato pelo Whatsapp</h3>
+            <div className="mt-2">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded block text-center"
               >
-                Enviar
-              </button>
+                Entrar em contato
+              </a>
             </div>
           </div>
 
